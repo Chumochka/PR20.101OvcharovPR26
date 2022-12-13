@@ -17,6 +17,7 @@
             android:layout_marginTop="19dp">
 
             <ImageButton
+                android:id="@+id/btnMenu"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"
@@ -96,15 +97,17 @@
                 android:id="@+id/switchSugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sugar"/>
+                android:text="@string/sugar"
+                android:checked="false"/>
             <Switch
                 android:id="@+id/switchAdds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/adds"
-                android:layout_marginLeft="50dp"/>
+                android:layout_marginLeft="50dp"
+                android:checked="false"/>
         </LinearLayout>
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -112,18 +115,19 @@
             android:orientation="horizontal"
             android:gravity="center_horizontal">
             <RadioButton
-                android:id="@+id/radioBtnDeliver"
+                android:id="@+id/rbDeliver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Deliver"/>
+                android:text="@string/Deliver"
+                android:checked="false"/>
             <RadioButton
-                android:id="@+id/radioBtnPickup"
+                android:id="@+id/rbPickup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Pickup"
                 android:checked="true"
                 android:layout_marginLeft="85dp"/>
-        </LinearLayout>
+        </RadioGroup>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,22 +137,25 @@
             android:layout_marginTop="10dp"
             android:textSize="16sp"
             android:textColor="#4D4242"/>
+
         <EditText
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="@string/fillName"
-            android:textColor="#868686"
-            android:textSize="13sp"
-            android:gravity="center_vertical"
-            android:background="#BBF4E3"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
-            android:layout_marginHorizontal="20dp"/>
+            android:background="#BBF4E3"
+            android:inputType="textPersonName"
+            android:gravity="center_vertical"
+            android:hint="@string/fillName"
+            android:textColor="#868686"
+            android:textSize="13sp" />
         <EditText
             android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="@string/fillPhone"
+            android:inputType="phone"
+            android:hint="@string/fillPhone"
             android:textColor="#868686"
             android:textSize="13sp"
             android:gravity="center_vertical"

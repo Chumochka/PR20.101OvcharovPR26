@@ -31,9 +31,9 @@
         <item>Каша овсянная с лесными ягодами</item>
     </string-array>
     <string-array name="cake">
-    <item>Бисквитный</item>
-    <item>Воздушный</item>
-    <item>Кремовый</item>
-    <item>Медовик</item>
+        <item>Бисквитный</item>
+        <item>Воздушный</item>
+        <item>Кремовый</item>
+        <item>Медовик</item>
     </string-array>
 </resources>
