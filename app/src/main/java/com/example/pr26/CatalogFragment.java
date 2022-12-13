@@ -44,22 +44,22 @@ public class CatalogFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnCoffee:
-                transaction("Кофе с карамелью", 254, "@drawable/coffee","@array/coffee");
+                transaction("Кофе с карамелью", "254 рублей");
                 break;
             case R.id.btnCake:
-                transaction("Шоколадный тор", 250, "@drawable/cake","@array/cake");
+                transaction("Торт", "250 рублей");
                 break;
             case R.id.btnCombo:
-                transaction("Тост с яичницой", 320, "@drawable/combo", "@array/combo");
+                transaction("Тост с яичницой", "320 рублей");
                 break;
             case R.id.btnTea:
-                transaction("Чай с Лимоном", 70, "@drawable/tea","@array/tea");
+                transaction("Чай с Лимоном", "70 рублей");
                 break;
         }
     }
-    public void transaction(String name, Integer price, String drawable, String array){
+    public void transaction(String name, String price){
         FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-        OrderFragment orderFragment = OrderFragment.newInstance(name, price, drawable, array);
+        OrderFragment orderFragment = OrderFragment.newInstance(name, price);
         fragmentTransaction.replace(R.id.fragmentContainerView, orderFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

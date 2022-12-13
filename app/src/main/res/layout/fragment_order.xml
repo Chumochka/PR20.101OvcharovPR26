@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="140dp"
-                android:text="Кофейня “Бодрость”"
+                android:text="@string/CafeName"
                 android:textColor="#2E2D2D"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
-            android:text="Ваш завтрак"
+            android:text="@string/OrderTitle"
             android:textColor="#2E2D2D"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -96,12 +96,12 @@
                 android:id="@+id/switchSugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Нужен сахар?"/>
+                android:text="@string/sugar"/>
             <Switch
                 android:id="@+id/switchAdds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Добавки?"
+                android:text="@string/adds"
                 android:layout_marginLeft="50dp"/>
         </LinearLayout>
         <LinearLayout
@@ -115,19 +115,19 @@
                 android:id="@+id/radioBtnDeliver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Доставка"/>
+                android:text="@string/Deliver"/>
             <RadioButton
                 android:id="@+id/radioBtnPickup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Самовывоз"
+                android:text="@string/Pickup"
                 android:checked="true"
                 android:layout_marginLeft="85dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Заполните данные, мы с вами свяжемся"
+            android:text="@string/fillText"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
@@ -137,7 +137,7 @@
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Введите свое имя"
+            android:text="@string/fillName"
             android:textColor="#868686"
             android:textSize="13sp"
             android:gravity="center_vertical"
@@ -148,7 +148,7 @@
             android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Введите свой номер телефона"
+            android:text="@string/fillPhone"
             android:textColor="#868686"
             android:textSize="13sp"
             android:gravity="center_vertical"
@@ -160,7 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="Отправить"
+            android:text="@string/Send"
             android:textAllCaps="false"
             android:textStyle="normal"
             android:textSize="18sp"
@@ -169,11 +169,11 @@
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"/>
         <Button
-            android:id="@+id/btnFind"
+            android:id="@+id/btnSearch"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="Найти кафе"
+            android:text="@string/Search"
             android:textAllCaps="false"
             android:textStyle="normal"
             android:textSize="18sp"

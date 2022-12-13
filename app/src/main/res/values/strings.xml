@@ -2,6 +2,17 @@
     <string name="app_name">PR26</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sugar">Нужен сахар?</string>
+    <string name="adds">Добавки?</string>
+    <string name="Deliver">Доставка</string>
+    <string name="Pickup">Самовывоз</string>
+    <string name="fillText">Заполните данные, мы с вами свяжемся</string>
+    <string name="fillName">Введите свое имя</string>
+    <string name="fillPhone">Введите свой номер телефона</string>
+    <string name="Send">Отправить</string>
+    <string name="Search">Найти кафе</string>
+    <string name="OrderTitle">Ваш завтрак</string>
+    <string name="CafeName">Кофейня “Бодрость”</string>
     <string-array name="coffee">
         <item>Нежный бархатный вкус</item>
         <item>Горький насыщенный вкус</item>
