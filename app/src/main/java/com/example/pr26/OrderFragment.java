@@ -44,6 +44,7 @@ public class OrderFragment extends Fragment {
     private EditText editTextPhone;
     private Button btnSend;
     private Button btnSearch;
+    private ImageButton btnBasket;
 
     public static OrderFragment newInstance(String name, String price) {
         OrderFragment fragment = new OrderFragment();
@@ -80,6 +81,8 @@ public class OrderFragment extends Fragment {
 
         btnMenu=view.findViewById(R.id.btnMenu);
 
+        btnBasket = view.findViewById(R.id.btnBasket);
+
         int drawable = R.drawable.coffee;
         int array = R.array.coffee;
         String name = getArguments().getString("name","");
@@ -106,9 +109,18 @@ public class OrderFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String addItem = spinner.getSelectedItem().toString();
-                Boolean sugar = switchSugar.isChecked();
-                Boolean adds = switchAdds.isChecked();
-                Boolean deliver = rbDeliver.isChecked();
+                int sugar = 0;
+                int adds = 0;
+                int deliver = 1;
+                if(switchSugar.isChecked()){
+                    sugar=1;
+                }
+                if(switchAdds.isChecked()){
+                    adds=1;
+                }
+                if(rbDeliver.isChecked()){
+                    deliver=1;
+                }
                 String clientName = editTextName.getText().toString();
                 String clientPhone = editTextPhone.getText().toString();
                 if(clientName.isEmpty() || clientPhone.isEmpty()) {
@@ -138,6 +150,16 @@ public class OrderFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 CatalogFragment catalogFragment = new CatalogFragment();
                 fragmentTransaction.replace(R.id.fragmentContainerView, catalogFragment);
+                fragmentTransaction.commit();
+            }
+        });
+        btnBasket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                BasketFragment basketFragment = new BasketFragment();
+                fragmentTransaction.replace(R.id.fragmentContainerView, basketFragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
